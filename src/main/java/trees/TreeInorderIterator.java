@@ -24,6 +24,9 @@ public class TreeInorderIterator implements Iterator<Node> {
 	}
 
 	public Node next() {
+		(stack.isEmpty())
+			throw new UnsupportedOperationException("Can't do getNext anymore");
+
 		Node next = stack.pop();
 		if (next.getRight() != null) {
 			addToStack(next.getRight());
